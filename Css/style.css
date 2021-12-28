@@ -88,4 +88,21 @@ html {
         padding-left: 100px;
         padding-right: 100px;
     }
+    .card
+{
+    border-radius: 10%;
+    width: 150px;
+}
+  }
+  @media (max-width: 400px)
+  {
+    div.navbar {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .card
+{
+    border-radius: 10%;
+    width: 100px;
+}
   }
