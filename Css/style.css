@@ -37,9 +37,9 @@ div.navbar .logo {
     float: left;
   }
 div.container{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 div.header-content h5
 {
@@ -52,6 +52,32 @@ div.header-content h5
 div.lower-content h6
 {
     text-align: center;
+}
+div.row div{
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.card
+{
+    border-radius: 10%;
+    width: 250px;
+}
+.card-section
+{
+    margin: 0 auto;
+}
+.card-section audio
+{
+    width: 180px;
+    
+}
+div.row div.card-divider
+{
+    margin: 0px;
+}
+div.work
+{
+    margin-bottom: 20px;
 }
 html {
     scroll-behavior: smooth;
