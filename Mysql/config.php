@@ -2,5 +2,5 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
-$dbname = "managetreatment";
+$dbname = "goodsoundeffect";
 ?>

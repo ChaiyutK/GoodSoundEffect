@@ -25,8 +25,15 @@ require("../mysql/config.php");
         <div class="upload">
         <div class="row">
             <div class="small-12 columns">
-                <form action="upload.php" method="post" enctype="multipart/form-data">
-                
+                <form action="uploadsave.php" method="post" enctype="multipart/form-data">
+                <label for="sound_id">Sound id:</label>
+                <input type="text" name="sound_id" id="sound_id" maxlength="10">
+            </div>
+            <div class="small-12 columns">
+                <label for="sound_name">Sound name:</label>
+                <input type="text" name="sound_name" id="sound_name" maxlength="30">
+            </div>
+            <div class="small-12 columns">
                 <label for="fileToUpload">Select Sound to upload:</label>
                 <input type="file" name="fileToUpload" id="fileToUpload">
             </div>
@@ -34,10 +41,15 @@ require("../mysql/config.php");
                 <label for="types">Choose a type:</label>
                     <select name="types" id="types" required>
                         <option value="">Choose a type</option>
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                        <?php
+               $sql="select * from type";
+               require("../mysql/connect.php");
+               while($row=mysqli_fetch_array($result))
+               {
+               echo "<option value='$row[type_id]'>$row[type_name]</option>";
+                }
+            require("../mysql/unconnect.php");
+               ?>
                     </select>
             </div>
             <div class="small-12 columns">
