@@ -53,9 +53,13 @@ div.lower-content h6
 {
     text-align: center;
 }
+div.audio-table{
+    margin-bottom: 20px;
+}
 div.row div{
     margin: 0 auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 div.row{
     border-style: solid;
