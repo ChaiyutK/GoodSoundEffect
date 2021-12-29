@@ -15,7 +15,7 @@ require("../mysql/config.php");
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="../image/logo.png" width="50px" height="50px">
+            <a href="../index.php"><img src="../image/logo.png" width="50px" height="50px"></a>
         </div>
         <div class="menu">
             <a href="#contact">Contact Me</a>
