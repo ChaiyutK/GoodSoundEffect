@@ -113,8 +113,13 @@ html {
     border-radius: 10%;
     width: 150px;
 }
+.card-section audio
+{
+    width: 120px;
+    
+}
   }
-  @media (max-width: 400px)
+  @media (max-width: 530px)
   {
     div.navbar {
         padding-left: 100px;
@@ -124,5 +129,10 @@ html {
 {
     border-radius: 10%;
     width: 100px;
+}
+.card-section audio
+{
+    width: 80px;
+    
 }
   }
