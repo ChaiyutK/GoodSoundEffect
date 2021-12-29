@@ -57,6 +57,12 @@ div.row div{
     margin: 0 auto;
     margin-bottom: 10px;
 }
+div.row{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+}
 .card
 {
     border-radius: 10%;
@@ -79,6 +85,16 @@ div.work
 {
     margin-bottom: 20px;
 }
+div.upload
+{
+    margin: 0 auto;
+    width: 600px;
+}
+div.center {
+    width: 91.6px;
+    margin: 0 auto;
+
+  }
 html {
     scroll-behavior: smooth;
 }
