@@ -1,5 +1,13 @@
 <?php
 require("mysql/config.php");
+if($_REQUEST['typesearch'])
+{
+    $typesearch = $_REQUEST['typesearch'];
+}
+else
+{
+    $typesearch = "type.type_id";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +39,27 @@ require("mysql/config.php");
         </div>
     <div class="audio-table">
             <div class="grid-x">
+                <div class="small-12 cell">
+                    <form action="index.php" method="post">
+                        <div class="typesearch">
+                            <select class="typesearch" name="typesearch" required>
+                                <option value = 'type.type_id'>All</option>
+                                <?php
+                                    $sql="select * from type";
+                                    require("mysql/connect.php");
+                                    while($row=mysqli_fetch_array($result))
+                                    {
+                                        echo "<option value='$row[type_id]'>$row[type_name]</option>";
+                                    }
+                                    require("mysql/unconnect.php");
+                                ?>
+                            </select>
+                            <button class="button secondary">Search</button>
+                        </div>
+                    </form>
+                </div>
             <?php
-               $sql="select * from sound";
+               $sql="select * from sound inner join type on sound.type_id = type.type_id where sound.type_id = $typesearch";
                require("mysql/connect.php");
                while($row=mysqli_fetch_array($result))
                {
