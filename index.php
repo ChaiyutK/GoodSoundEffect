@@ -1,6 +1,7 @@
 <?php
 require("mysql/config.php");
-if($_REQUEST['typesearch'])
+$count = 1;
+if(!empty($_POST['typesearch']))
 {
     $typesearch = $_REQUEST['typesearch'];
 }
@@ -19,6 +20,7 @@ else
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation-float.min.css">
     <link rel="stylesheet" href="Css/style_gse.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <div class="navbar">
@@ -49,7 +51,14 @@ else
                                     require("mysql/connect.php");
                                     while($row=mysqli_fetch_array($result))
                                     {
-                                        echo "<option value='$row[type_id]'>$row[type_name]</option>";
+                                        if($row['type_id'] == $typesearch)
+                                        {
+                                            echo "<option value='$row[type_id]' selected>$row[type_name]</option>";
+                                        }
+                                        else
+                                        {
+                                            echo "<option value='$row[type_id]'>$row[type_name]</option>";
+                                        }
                                     }
                                     require("mysql/unconnect.php");
                                 ?>
@@ -71,29 +80,30 @@ else
                                 <h4><?php echo "$row[sound_name]"; ?></h4>
                             </div>
                             <?php
-                                    echo "<a href='Sound/$row[sound_id].mp3' download='$row[sound_name].mp3'>"
+                                    echo "<a href='Sound/$row[sound_id].mp3' download='$row[sound_name].mp3'>";
                             ?>
                                 <img src="image/soundwave.gif">
                             </a>
                             <div class="card-section">
-                                <audio controls>
-                                    <?php
-                                            echo "<source src='Sound/$row[sound_id].mp3' type='audio/mpeg'>"
-                                    ?>
-                                </audio>
+
+                            <audio id="<?php echo "audio$count"; ?>" onended="onAudioEnded('<?php echo "playPauseBT$count"; ?>');">
+                            <?php
+                                    echo "<source src='Sound/$row[sound_id].mp3' type='audio/mpeg'>";
+                            ?>
+                            </audio>
+                            <button type="button" class="button secondary" id="<?php echo "playPauseBT$count"; ?>" onclick="playPause('<?php echo "playPauseBT$count"; ?>','<?php echo "audio$count"; ?>')"><i class="material-icons">play_arrow</i></button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <?php
+                $count++;
                  }
                  require("mysql/unconnect.php");
                 ?>
             </div>
     </div>
-
-            
-        
     </div>
+<script src="Js/play_button.js"></script>
 </body>
 </html>

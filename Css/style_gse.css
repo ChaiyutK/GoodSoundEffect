@@ -72,6 +72,8 @@ div.grid-x{
     border-radius: 10%;
     width: 250px;
     margin: 0 auto;
+    border-color: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 .card-section
 {
@@ -81,6 +83,10 @@ div.grid-x{
 {
     width: 180px;
     
+}
+div.card-section button
+{
+    border-radius: 15px;
 }
 div.grid-x div.card-divider
 {
@@ -102,6 +108,9 @@ div.center {
   }
 div.typesearch{
     width: 300px;
+}
+div.typesearch button{
+    border-radius: 10px;
 }
 select.typesearch{
     width: 200px;
