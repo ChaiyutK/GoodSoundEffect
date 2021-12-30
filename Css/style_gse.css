@@ -56,12 +56,12 @@ div.lower-content h6
 div.audio-table{
     margin-bottom: 20px;
 }
-div.row div{
+div.grid-x div{
     margin: 0 auto;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-div.row{
+div.grid-x{
     border-style: solid;
     border-width: 2px;
     border-radius: 15px;
@@ -71,6 +71,7 @@ div.row{
 {
     border-radius: 10%;
     width: 250px;
+    margin: 0 auto;
 }
 .card-section
 {
@@ -81,13 +82,13 @@ div.row{
     width: 180px;
     
 }
-div.row div.card-divider
+div.grid-x div.card-divider
 {
     margin: 0px;
 }
 div.work
 {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 div.upload
 {

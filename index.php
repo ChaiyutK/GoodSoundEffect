@@ -10,7 +10,7 @@ require("mysql/config.php");
     <title>GoodSoundEffect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation-float.min.css">
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style_gse.css">
 </head>
 <body>
     <div class="navbar">
@@ -30,14 +30,14 @@ require("mysql/config.php");
             <h6>this website made for video editor who want to download sound effect</h6>
         </div>
     <div class="audio-table">
-            <div class="row">
+            <div class="grid-x">
             <?php
                $sql="select * from sound";
                require("mysql/connect.php");
                while($row=mysqli_fetch_array($result))
                {
             ?>  
-                <div class="small-4 columns">
+                <div class="small-4 cell">
                     <div class="work">
                         <div class="card">
                             <div class="card-divider">

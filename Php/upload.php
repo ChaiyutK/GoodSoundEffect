@@ -10,7 +10,7 @@ require("../mysql/config.php");
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.4/css/foundation-float.min.css">
-    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/style_gse.css">
 </head>
 <body>
     <div class="navbar">
