@@ -28,7 +28,7 @@ else
             <a href="index.php"><img src="image/logo.png" width="50px" height="50px"></a>
         </div>
         <div class="menu">
-            <a href="#contact">Contact Me</a>
+            <a href="https://twitter.com/Xerox22735494" target="_blank">Contact Me</a>
         </div>
     </div>
     
@@ -91,8 +91,8 @@ else
                                     echo "<source src='Sound/$row[sound_id].mp3' type='audio/mpeg'>";
                             ?>
                             </audio>
-                            <button type="button" class="button secondary" id="<?php echo "playPauseBT$count"; ?>" onclick="playPause('<?php echo "playPauseBT$count"; ?>','<?php echo "audio$count"; ?>')"><i class="material-icons">play_arrow</i></button>
-                            </div>
+                            <button type="button" class="button secondary" id="<?php echo "playPauseBT$count"; ?>" onclick="playPause('<?php echo "playPauseBT$count"; ?>','<?php echo "audio$count"; ?>')"><i class="material-icons">play_arrow</i></button>   
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,23 @@ else
                 ?>
             </div>
     </div>
+    <button class="open-button" onclick="openForm()"><img src="image/wallet.png"></button>
+
+    <div class="chat-popup" id="myForm">
+        <div class="form-container">
+            <h5 style="text-align: center;">Donate Cardano</h5>
+            <label for="msg" style="text-align: center;"><b>Wallet Address</b></label>
+            <img src="image/ada_donate.png">
+            <h5 style="text-align:center;">addr1qx307l62pckgmkvg0unh2
+                zv2mlplczazx5ndauqg04leu52u
+                adpw5hg8t8klnfdx69w267ydhap
+                0utcfxskhnj48atass2c5c3</h5>
+            <button type="button" class="btn" onclick="closeForm()">Close</button>
+        </div>
     </div>
+<div class="footer"><h5 style="text-align:center;">Made By <a href="https://twitter.com/Xerox22735494" target="_blank">@Xerox22735494</a></h5></div>
+</div>
+<script src="Js/donate_button.js"></script>
 <script src="Js/play_button.js"></script>
 </body>
 </html>
