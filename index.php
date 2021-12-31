@@ -1,8 +1,8 @@
 <?php
 require("mysql/config.php");
-if($_REQUEST['typesearch'])
+if(!empty($_POST['typesearch']))
 {
-    $typesearch = $_REQUEST['typesearch'];
+    $typesearch = $_POST['typesearch'];
 }
 else
 {
